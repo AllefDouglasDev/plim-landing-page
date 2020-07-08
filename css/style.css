@@ -14,24 +14,83 @@
   box-sizing: border-box;
 }
 
-body {
+html,
+body,
+h1,
+span,
+p {
   font-family: "Roboto", sans-serif;
 }
 
-nav {
+html {
+  scroll-behavior: smooth;
+}
+
+header {
   background-color: var(--primary);
+  position: fixed;
+  width: 100%;
+}
+
+nav {
   display: flex;
   justify-content: flex-end;
+  margin: 0 auto;
+  padding: 0.5rem;
+  width: 80%;
 }
 
 nav ul {
   display: flex;
-  padding: 5px;
   list-style-type: none;
+  padding: 5px;
 }
 
 nav ul li {
-  text-decoration: none;
   margin-right: 20px;
+  text-decoration: none;
+}
+
+nav ul li a {
   color: var(--white);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+section#home {
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--white);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+section#about-us {
+  align-items: center;
+  color: var(--primary);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+section#services {
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--white);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+section#join {
+  align-items: center;
+  color: var(--primary);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
 }
