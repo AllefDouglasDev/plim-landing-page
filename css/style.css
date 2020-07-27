@@ -51,7 +51,7 @@ nav {
 nav > a {
   display: none;
   color: white;
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 nav > img {
@@ -63,12 +63,15 @@ nav ul {
   list-style-type: none;
   padding: 5px;
   transition: all 0.3s ease;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
-nav ul a {
-  color: var(--white);
+nav ul > a {
+  display: none;
+  color: white;
+  font-size: xx-large;
   text-align: end;
-  font-size: x-large;
 }
 
 nav ul li {
@@ -143,11 +146,24 @@ section#home h2 {
 }
 
 section#about-us {
-  align-items: center;
   color: var(--primary);
   display: flex;
   height: 100vh;
   justify-content: center;
+  width: 100%;
+}
+
+section#about-us h2 {
+  font-size: xx-large;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+section#about-us .title {
+  display: flex;
+  height: fit-content;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
 }
 
@@ -176,7 +192,7 @@ section#join {
 
   nav {
     justify-content: space-between;
-    padding: 1.2rem
+    padding: 1.2rem 80px;
   }
 
   nav > ul {
@@ -185,12 +201,17 @@ section#join {
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    padding: 20px 40px;
+    padding: 80px 80px;
     position: absolute;
     top: 0;
     right: 0;
     background: var(--burguer);
     transform: translateX(100%);
+    justify-content: flex-start;
+  }
+
+  nav ul > a {
+    display: block;
   }
 
   nav > ul li:nth-child(n + 1){
@@ -199,6 +220,8 @@ section#join {
 
   nav > img {
     display: block;
+    width: 150px;
+    height: 150px;
   }
 
   nav > a {
@@ -216,13 +239,17 @@ section#join {
 
 @media screen and (max-width: 600px) { 
 
-  nav > ul {
-    padding: 20px;
+  nav {
+    padding: 1.2rem 40px;
   }
 
-  nav img {
-    width: 85px;
-    height: 85px;
+  nav > img {
+    width: 120px;
+    height: 120px;
+  }
+
+  nav > ul {
+    padding: 60px 40px;
   }
 
   section#home .plim {
@@ -239,8 +266,12 @@ section#join {
 @media screen and (max-width: 465px) { 
 
   nav img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+  }
+
+  nav > ul {
+    padding: 40px;
   }
 
   section#home .plim {
@@ -257,9 +288,17 @@ section#join {
 
 @media screen and (max-width: 325px) { 
 
+  nav {
+    padding: 1.2rem 20px;
+  }
+
   nav img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
+  }
+
+  nav > ul {
+    padding: 40px;
   }
 
   section#home .plim {
