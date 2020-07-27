@@ -17,25 +17,38 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <nav class="container">
-        <ul>
+      <nav class="nav">
+        <img
+          src="assets/icons/meteor/96x96-meteor.ico"
+          alt="Meteor - Plim Logo"
+          class="meteor"
+        />
+        <ul id="nav">
+          <a href="javascript:closeNav()" class="close" onclick="closeNav()">
+            <i class="fa fa-times"></i>
+          </a>
           <li>
-            <a href="#home">HOME</a>
+            <a href="#home" onclick="closeNav()">HOME</a>
           </li>
           <li>
-            <a href="#about-us">QUEM SOMOS</a>
+            <a href="#about-us" onclick="closeNav()">QUEM SOMOS</a>
           </li>
           <li>
-            <a href="#services">SERVIÇOS OFERTADOS</a>
+            <a href="#services" onclick="closeNav()">SERVIÇOS OFERTADOS</a>
           </li>
           <li>
-            <a href="#join">PARTICIPE</a>
+            <a href="#join" onclick="closeNav()">PARTICIPE</a>
           </li>
         </ul>
+        <a href="javascript:openNav()" class="hamburguer" onclick="openNav()">
+          <i class="fa fa-bars"></i>
+        </a>
       </nav>
     </header>
 
@@ -55,6 +68,11 @@
         Uma comunidade que aprende, ensina e<br />
         impulsiona pequenos negócios.
       </h2>
+
+      <div class="arrow-container">
+        <a class="arrow" href="#about-us"></a>
+      </div>
+
     </section>
 
     <section id="about-us" class="about-us">
@@ -68,5 +86,7 @@
     <section id="join" class="join">
       Join
     </section>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

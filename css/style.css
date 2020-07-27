@@ -6,6 +6,11 @@
 
   --white: #ffffff;
   --black: #000000;
+
+  --burguer: #0a2736;
+
+  --tablet: 1000px;
+  --mobile: 768px;
 }
 
 * {
@@ -36,15 +41,34 @@ header {
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   padding: 0.5rem;
+  max-width: 800px;
+}
+
+nav > a {
+  display: none;
+  color: white;
+  font-size: x-large;
+}
+
+nav > img {
+  display: none;
 }
 
 nav ul {
   display: flex;
   list-style-type: none;
   padding: 5px;
+  transition: all 0.3s ease;
+}
+
+nav ul a {
+  color: var(--white);
+  text-align: end;
+  font-size: x-large;
 }
 
 nav ul li {
@@ -67,10 +91,39 @@ section#home {
   display: flex;
   height: 100vh;
   justify-content: center;
-  width: 100%;
   flex-direction: column;
   text-align: center;
   position: relative;
+  padding-bottom: 20vh;
+}
+
+section#home div {
+  display: inline-block;
+  position: absolute;
+  bottom: 10%;
+  margin-top: auto;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  animation: pulse 1s infinite;
+  animation-timing-function: ease-in-out;  
+}
+
+@keyframes pulse {
+  0% { bottom: 10%}
+  50% { bottom: 11%}
+  100% { bottom: 10%}
+}
+
+section#home div .arrow {
+  border: solid var(--white);
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
 }
 
 section#home .meteor {
@@ -117,6 +170,106 @@ section#join {
   width: 100%;
 }
 
-.container {
-  width: 50%;
+/* NAV */
+
+@media screen and (max-width: 1000px) {
+
+  nav {
+    justify-content: space-between;
+    padding: 1.2rem
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--burguer);
+    transform: translateX(100%);
+  }
+
+  nav > ul li:nth-child(n + 1){
+    margin: 10px 0;
+  }
+
+  nav > img {
+    display: block;
+  }
+
+  nav > a {
+    display: block;
+  }
+
+  section#home {
+    padding-bottom: 10vh;
+  }
+
+  section#home .meteor {
+    display: none;
+  }
 }
+
+@media screen and (max-width: 600px) { 
+
+  nav > ul {
+    padding: 20px;
+  }
+
+  nav img {
+    width: 85px;
+    height: 85px;
+  }
+
+  section#home .plim {
+    width: 200px;
+    height: 200px;
+  }
+
+  section#home h2 {
+    font-size: x-large;
+  }
+
+}
+
+@media screen and (max-width: 465px) { 
+
+  nav img {
+    width: 80px;
+    height: 80px;
+  }
+
+  section#home .plim {
+    width: 150px;
+    height: 150px;
+  }
+
+  section#home h2 {
+    font-size: large;
+  }
+
+}
+
+
+@media screen and (max-width: 325px) { 
+
+  nav img {
+    width: 70px;
+    height: 70px;
+  }
+
+  section#home .plim {
+    width: 150px;
+    height: 150px;
+  }
+
+  section#home h2 {
+    font-size: medium;
+  }
+
+}
+
