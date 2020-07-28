@@ -1,5 +1,9 @@
+const mq = window.matchMedia("(max-width: 1000px)");
+
 function handleNav(position) {
-  return document.getElementById("nav").style.transform = `translateX(${position}%)`
+  if(mq.matches) {
+    return document.getElementById("nav").style.transform = `translateX(${position}%)`
+  }
 }
 
 function openNav() {

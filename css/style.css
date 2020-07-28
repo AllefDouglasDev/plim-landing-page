@@ -22,10 +22,17 @@
 html,
 body,
 h1,
+h3,
+h4,
 h2,
 span,
 p {
   font-family: "Roboto", sans-serif;
+}
+
+h4 {
+  text-align: justify;
+  word-spacing: -1px;
 }
 
 html {
@@ -44,8 +51,8 @@ nav {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 0.5rem;
-  max-width: 800px;
+  padding: 0.5rem 0;
+  max-width: 1200px;
 }
 
 nav > a {
@@ -64,7 +71,7 @@ nav ul {
   padding: 5px;
   transition: all 0.3s ease;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: flex-end;
 }
 
 nav ul > a {
@@ -79,12 +86,22 @@ nav ul li {
   text-decoration: none;
 }
 
+nav ul li:last-child {
+  margin-right: 0;
+}
+
 nav ul li a {
   color: var(--white);
   cursor: pointer;
   text-decoration: none;
   font-size: x-large;
   font-weight: bold;
+}
+
+footer {
+  display: flex;
+  min-height: 100px;
+  background: var(--primary);
 }
 
 section#home {
@@ -149,13 +166,14 @@ section#about-us {
   color: var(--primary);
   display: flex;
   height: 100vh;
-  justify-content: center;
   width: 100%;
+  flex-direction: column;
+  background: var(--secondary);
 }
 
 section#about-us h2 {
-  font-size: xx-large;
-  font-weight: 400;
+  font-size: xxx-large;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -165,6 +183,43 @@ section#about-us .title {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section#about-us .title img {
+  margin-right: 10px;
+}
+
+section#about-us .content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+section#about-us .content h4 {
+  width: 50%;
+  height: 50%;
+  font-size: xx-large;
+  line-height: 45px;
+}
+
+section#about-us .image{
+  width: 50%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10%;
+}
+
+section#about-us .content img{
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
 
 section#services {
@@ -175,6 +230,57 @@ section#services {
   height: 100vh;
   justify-content: center;
   width: 100%;
+  flex-direction: column;
+  color: var(--secondary);
+}
+
+section#services h2 {
+  font-size: xxx-large;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+section#services .title {
+  display: flex;
+  height: fit-content;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section#services .title img {
+  margin-right: 10px;
+}
+
+section#services .content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+section#services .content h4 {
+  width: 50%;
+  font-size: x-large;
+  line-height: 45px;
+}
+
+section#services .image{
+  width: 50%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#services .content img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 section#join {
@@ -183,16 +289,171 @@ section#join {
   display: flex;
   height: 100vh;
   justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background: var(--secondary)
+}
+
+section#join h2 {
+  font-size: xxx-large;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+section#join .title {
+  display: flex;
+  height: fit-content;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section#join .title img {
+  margin-right: 10px;
+}
+
+section#join .content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+section#join .content .type {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 80%;
+}
+
+section#join .content .type .title {
+  display: flex;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  font-size: x-large;
+}
+
+section#join .content .type:first-child {
+  margin-right: 20px;
+}
+
+section#join .content .type .title img {
+  height: 70%;
+}
+
+section#join .content .type .title h3 {
+  font-size: xx-large;
+}
+
+section#join .content .type h4 {
   width: 100%;
 }
 
-/* NAV */
+section#join .content h4 {
+  width: 50%;
+  font-size: x-large;
+  line-height: 45px;
+}
+
+section#join .image{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+section#join .content img{
+  height: 50%;
+}
+
+footer .social-media {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin:0 25px;
+}
+
+footer .social-media > a > img {
+  height: 80px;
+  border-radius: 50%;
+  object-fit: none;
+  transform: scale(0.6);
+}
+
+@media screen and (max-width: 1250px) { 
+  nav {
+    justify-content: space-between;
+    padding: 30px 50px;
+  }
+
+  nav > ul {
+    justify-content: center;
+  }
+
+  section#about-us .title, section#services .title, section#join > .title {
+    width: auto;
+    margin: 0 50px;
+  }
+
+  section#services .title {
+    width: auto;
+    margin: 0;
+  }
+
+  section#about-us .content, section#services .content, section#join .content  {
+    width: auto;
+    margin: 0 50px;
+  }
+
+  section#services .title, section#join > .title {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  section#join > .content {
+    flex-direction: column;
+  }
+
+  section#join > .content > .type {
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  section#join > .content > .type > .title {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 1225px) {
+
+  section#join .content .type .title h3 {
+    font-size: x-large;
+  }
+
+  section#join .content .type  h4 {
+    font-size: large;
+  }
+
+}
+
+@media screen and (max-width: 1009px) {
+
+  section#join .content .type .title h3 {
+    font-size: x-large;
+  }
+
+}
 
 @media screen and (max-width: 1000px) {
 
   nav {
     justify-content: space-between;
-    padding: 1.2rem 80px;
+    padding: 0 80px;
   }
 
   nav > ul {
@@ -201,7 +462,7 @@ section#join {
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    padding: 80px 80px;
+    padding: 60px 80px;
     position: absolute;
     top: 0;
     right: 0;
@@ -235,12 +496,142 @@ section#join {
   section#home .meteor {
     display: none;
   }
+
+  section#about-us, section#services {
+    height: 100%;
+  }
+
+  section#about-us .title {
+    width: auto;
+    margin: 0;
+    padding: 50px 70px;
+    justify-content: center;
+  }
+
+  section#about-us .title img {
+    display: none;
+  }
+
+  section#about-us .content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  section#about-us .content h4 {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  section#about-us .image {
+    justify-content: center;
+  }
+
+  section#services .title {
+    width: auto;
+    margin: 0;
+    padding: 50px 70px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  section#services .title img {
+    display: none;
+  }
+
+  section#services .content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  section#services .content h4 {
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  section#services .image {
+    justify-content: center;
+  }
+
+  section#join .title {
+    width: auto;
+    margin: 0;
+    padding: 50px 70px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  section#join .title img {
+    display: none;
+  }
+
+  section#join .content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section#join .content > .type  {
+    margin: 0 !important;
+  }
+
+  section#join .content .type .title {
+    justify-content: center;
+  }
+
+  section#join .content .type .title > h3 {
+    font-size: xx-large;
+  }
+
+  section#join .content h4 {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  section#join .image {
+    justify-content: center;
+  }
+
+  footer .social-media {
+    justify-content: center;
+
+}
+
+@media screen and (max-width: 750px) { 
+  
+  section#about-us > div {
+    padding: 0 20px;
+  }
+
+  h2 {
+    font-size: xx-large !important;
+  }
+  
+  h3 {
+    font-size: x-large !important;
+  }
+
+  h4 {
+    font-size: large !important;
+  }
 }
 
 @media screen and (max-width: 600px) { 
 
   nav {
-    padding: 1.2rem 40px;
+    padding: 0 40px;
   }
 
   nav > img {
@@ -257,10 +648,42 @@ section#join {
     height: 200px;
   }
 
-  section#home h2 {
+  section#about-us .content, section#services .content, section#join .content  {
+    margin: 0;
+    margin-bottom: 100px;
+  }
+
+  section#join .content > .type  {
+    width: 80%;
+  }
+
+  section#join .content > .type > .title  {
+    padding-bottom: 20px;
+  }
+
+  h2 {
     font-size: x-large;
   }
 
+
+  h4 {
+    font-size: large !important;
+    line-height: 35px !important;
+  }
+
+
+}
+
+@media screen and (max-width: 500px) { 
+
+  h2, h3 {
+    font-size: x-large !important;
+  }
+
+  h4 {
+    font-size: large !important;
+    line-height: 35px;
+  }
 }
 
 @media screen and (max-width: 465px) { 
@@ -279,17 +702,38 @@ section#join {
     height: 150px;
   }
 
-  section#home h2 {
-    font-size: large;
+  section#home h2{
+    width: 80%;
+  }
+
+  section#services, section#join {
+    height: 100%;
+  }
+
+  h2 {
+    font-size: x-large !important;
+  }
+
+  h4 {
+    font-size: large !important;
+    line-height: 35px !important;
   }
 
 }
 
+@media screen and (max-width: 410px) {
 
-@media screen and (max-width: 325px) { 
+  section#services .content h4 {
+    font-size: medium !important;
+    line-height: 25px !important;
+  }
+} 
+
+
+@media screen and (max-width: 375px) { 
 
   nav {
-    padding: 1.2rem 20px;
+    padding: 0 20px;
   }
 
   nav img {
@@ -298,7 +742,7 @@ section#join {
   }
 
   nav > ul {
-    padding: 40px;
+    padding: 20px;
   }
 
   section#home .plim {
@@ -308,6 +752,32 @@ section#join {
 
   section#home h2 {
     font-size: medium;
+  }
+
+  section#about-us .title {
+    padding-bottom: 30px;
+  }
+
+  section#about-us .image {
+    margin-top: 0;
+  }
+
+  section#services .title {
+    padding-bottom: 20px;
+  }
+
+  section#services .image {
+    margin-top: 0;
+  }
+
+  section#about-us .content h4 {
+    font-size: medium !important;
+    line-height: 25px !important;
+  }
+
+  section#services .content h4 {
+    font-size: small !important;
+    line-height: 25px !important;
   }
 
 }
