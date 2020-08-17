@@ -2,7 +2,7 @@ const mq = window.matchMedia("(max-width: 1000px)");
 
 function handleNav(position) {
   if(mq.matches) {
-    return document.getElementById("nav").style.transform = `translateX(${position}%)`
+    return document.getElementById("nav").setAttribute('transform', `translateX(${position}%)`)
   }
 }
 
